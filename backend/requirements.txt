@@ -6,3 +6,5 @@ pytesseract
 Pillow
 langchain
 langchain_groq
+PyPDF2
+
