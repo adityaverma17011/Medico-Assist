@@ -6,11 +6,16 @@ from parser_utils import extract_combined_text
 
 app = FastAPI()
 
+# IMPORTANT: Remove trailing slash from origin URL and add allow_credentials if needed
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://medico-llm-assistant.netlify.app/"],  
+    allow_origins=[
+        "https://medico-llm-assistant.netlify.app",  # No trailing slash
+        "http://localhost:3000",  # Add localhost if testing locally
+    ],
     allow_methods=["*"],
-    allow_headers=["*"]
+    allow_headers=["*"],
+    allow_credentials=True,  # Add if your frontend sends cookies or auth headers
 )
 
 @app.get("/")
