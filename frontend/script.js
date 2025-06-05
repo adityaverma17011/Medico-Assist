@@ -4,7 +4,7 @@ document.getElementById("uploadForm").addEventListener("submit", async function 
 
   const formData = new FormData(this);
 
-  const response = await fetch("http://127.0.0.1:8000/analyze/", {
+  const response = await fetch("https://medico-assist.onrender.com/analyze/", {
     method: "POST",
     body: formData
   });
@@ -46,7 +46,7 @@ async function sendChat() {
   const formData = new FormData();
   formData.append("message", message);
 
-  const response = await fetch("http://127.0.0.1:8000/chat/", {
+  const response = await fetch("https://medico-assist.onrender.com/chat/", {
     method: "POST",
     body: formData
   });
