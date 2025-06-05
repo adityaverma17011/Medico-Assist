@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Medico LLM Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- ✅ Translator Widget Container -->
+   <div class="translate-wrapper">
+   
+  <div id="google_translate_element"></div>
+  </div>
+
+  <h1>Smart Medical Diagnosis & Prescription Validator</h1>
+
+  <form id="uploadForm">
+    <label>Symptoms:</label><br>
+    <textarea name="symptoms" rows="5" cols="50" required></textarea><br>
+
+    <label>Test Results (optional):</label><br>
+    <textarea name="test_results" rows="5" cols="50"></textarea><br>
+
+    <label>Prescription Text:</label><br>
+    <textarea name="prescription_text" rows="5" cols="50"></textarea><br>
+
+    <label>Upload Prescriptions (PDF/Image):</label>
+    <input type="file" name="prescription_files" multiple class="uploaded"><br>
+
+    <label>Upload Test Results (PDF/Image):</label>
+    <input type="file" name="test_files" multiple class="uploaded"><br><br>
+
+    <button type="submit" class="analyze">Analyze</button>
+  </form>
+
+  <h2>Result:</h2>
+  <div class="chat-container" id="chatContainer"></div>
+
+  <div class="chatbox">
+    <div class="chat-input-wrapper">
+      <textarea
+        id="chatInput"
+        placeholder="Type your message here..."
+        rows="1"
+        oninput="autoResize(this)"
+      ></textarea>
+      <button onclick="sendChat()">➤</button>
+    </div>
+  </div>
+
+  <!-- ✅ External JS -->
+  <script src="script.js"></script>
+</body>
+</html>

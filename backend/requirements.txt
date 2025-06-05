@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+python-dotenv
+pypdf
+pytesseract
+Pillow
+langchain
+langchain_groq

@@ -1,0 +1,181 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    padding-bottom: 160px; /* space for fixed chat input */
+    background-color: lightgreen;
+    box-sizing: border-box;
+}
+
+/* .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
+
+h1, h2, h3 {
+    text-align: center;
+    font-weight: bold;
+}
+
+form {
+    /* margin: 20px 0; */
+    border: 5px solid black;
+    padding: 40px;
+    margin: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+label {
+    font-size: large;
+    font-weight: 800;
+}
+
+textarea {
+    border-radius: 5px;
+    background-color:#f1f0f0;
+    font-size: large;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.uploaded {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: large;
+}
+.analyze{
+    border-radius: 3px;
+    padding:10px;
+    background-color: forestgreen;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+/* ✅ ChatGPT-style chat interface */
+
+.chat-container {
+    margin-bottom: 20px;
+    padding: 20px 40px;
+    /* max-height: 600px; */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-message {
+    padding: 10px 15px;
+    border-radius: 12px;
+    max-width: 60;
+       font-size: 15px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #DCF8C6;
+    align-self: flex-end;
+    text-align: right;
+    margin-left: auto;
+    color:crimson;
+    font-size:large;
+    font-weight:900;
+}
+
+.bot-message {
+    background-color: #f1f0f0;
+    align-self: flex-start;
+    margin-right: auto;
+    color: black;
+    font-size: medium;
+    font-weight: 800;
+}
+
+.chatbox {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color:lightgreen;
+    padding: 10px 20px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.chat-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#chatInput {
+    flex: 1;
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    resize: none;
+    max-height: 120px;
+    overflow-y: auto;
+    background-color:beige;
+}
+
+.chatbox button {
+    background-color: forestgreen;
+    color:black;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+
+
+/* Translator box styling */
+#google_translate_element {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  background:forestgreen;
+  padding: 6px 12px;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+  font-family: Arial, sans-serif;
+}
+
+/* ✅ Hide the Google branding logo and banner */
+.goog-logo-link,
+
+.goog-te-gadget-icon {
+  display: none !important;
+}
+
+/* Optional: reduce padding inside the dropdown */
+.goog-te-combo {
+  padding: 5px;
+  font-size: 14px;
+}
+/* Hide Google branding logo */
+.goog-logo-link, .goog-te-gadget-icon {
+  display: none !important;
+  pointer-events: none !important;
+}
+
