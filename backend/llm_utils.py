@@ -7,7 +7,7 @@ load_dotenv()
 groq_key = os.getenv("GROQ_API_KEY")
 
 llm = ChatGroq(
-    model_name="llama3-70b-8192",
+    model="llama-3.1-70b-versatile"
     temperature=0.3,
     max_tokens=2048,
     groq_api_key=groq_key
